@@ -1,0 +1,1 @@
+{"compilerOptions": {"target": "ES2022", "module": "ESNext", "moduleResolution": "Bundler", "allowJs": true, "checkJs": false, "declaration": true, "emitDeclarationOnly": true, "skipLibCheck": true, "rootDir": "packages", "outDir": ".types", "types": ["node"], "allowImportingTsExtensions": true}, "include": ["packages/*/src/**/*"]}
