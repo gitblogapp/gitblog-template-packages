@@ -16,6 +16,9 @@ for(const name of ['core','cli','browser']) {
  }
 }
 await cp('packages/core/dist/taxonomy.d.ts','packages/cli/dist/taxonomy-types.d.ts');
+for (const name of ['deployment-config', 'site-config']) {
+ await cp(`packages/core/dist/${name}.d.ts`, `packages/cli/dist/${name}.d.ts`);
+}
 const declaration='packages/cli/dist/taxonomy.d.ts';
-await writeFile(declaration,(await readFile(declaration,'utf8')).replace('../../core/src/taxonomy.ts','./taxonomy-types'));
+await writeFile(declaration,(await readFile(declaration,'utf8')).replace('../../core/src/taxonomy.ts','./taxonomy-types.js'));
 await rm('.types',{recursive:true,force:true});

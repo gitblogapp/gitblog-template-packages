@@ -1,5 +1,5 @@
 {
-  "name": "gitblog-packages",
+  "name": "gitblog-template-packages",
   "private": true,
   "type": "module",
   "scripts": {

@@ -1,8 +1,14 @@
 # Shared-package adoption verification — 2026-10-25
 
+## Repository rename and 0.1.1 preparation
+
+The repository and local checkout are now named `gitblog-template-packages`. Package names remain `@gitblogapp/core`, `@gitblogapp/cli`, and `@gitblogapp/browser`. Version 0.1.1 updates their repository metadata, declares public npm access, and makes the CLI declarations self-contained for NodeNext consumers.
+
+Six package tests, the build, and packing passed. Both templates installed the 0.1.1 tarballs locally and passed `update:check`, including production builds, SEO fixtures, and preservation checks. Astro also passed `test:integration`. These checks precede publication; registry publication and adoption must be confirmed separately.
+
 ## Released artifacts
 
-- Source: `gitblogapp/gitblog-packages`, initial implementation `5a8b217`.
+- Source: `gitblogapp/gitblog-template-packages`, initial implementation `5a8b217`.
 - Release: `v0.1.0`, npm-compatible core/CLI/browser tarballs and SHA-256 checksums.
 - Package CI on Node 24 passed (Actions run `40116194033`).
 - Both templates installed the public GitHub release URLs and then completed `npm ci`. Their lockfiles contain tarball integrity hashes, with no local `file:` package dependency.

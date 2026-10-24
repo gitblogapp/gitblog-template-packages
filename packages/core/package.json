@@ -1,6 +1,6 @@
 {
   "name": "@gitblogapp/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Framework-independent GitBlog core",
   "engines": {
@@ -21,7 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gitblogapp/gitblog-packages.git",
+    "url": "https://github.com/gitblogapp/gitblog-template-packages.git",
     "directory": "packages/core"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/gitblogapp/gitblog-template-packages#readme",
+  "bugs": {
+    "url": "https://github.com/gitblogapp/gitblog-template-packages/issues"
   }
 }
