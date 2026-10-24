@@ -6,6 +6,14 @@ The repository and local checkout are now named `gitblog-template-packages`. Pac
 
 Six package tests, the build, and packing passed. Both templates installed the 0.1.1 tarballs locally and passed `update:check`, including production builds, SEO fixtures, and preservation checks. Astro also passed `test:integration`. These checks precede publication; registry publication and adoption must be confirmed separately.
 
+## npm publication
+
+All three packages are now public on npm at `0.1.1`, under the `gitblogapp` organization. Their registry tarball integrity values match the tested local artifacts. The same artifacts and checksums are preserved in [GitHub release v0.1.1](https://github.com/gitblogapp/gitblog-template-packages/releases/tag/v0.1.1).
+
+Both templates pin the package versions to `0.1.1`, with registry tarball URLs and integrity in their lockfiles. Clean `npm ci` completed against those registry artifacts. The versioned GitHub URLs from 0.1.0 remain available for existing consumers.
+
+Both templates also passed `update:check` again after the registry install, including production builds, SEO fixtures, and preservation checks. Svelte's npm adoption is released as template `1.14.2`; Astro remains a local template without a Git remote. No existing user blog was upgraded or deployed.
+
 ## Released artifacts
 
 - Source: `gitblogapp/gitblog-template-packages`, initial implementation `5a8b217`.

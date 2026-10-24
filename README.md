@@ -23,13 +23,15 @@ Node-only code and dependencies never belong in the browser package. Core's iden
 
 ## Install a release
 
-The initial distribution uses npm-compatible tarballs in GitHub Releases. No npm account or private package token is needed to install them. Each template commits exact release URLs and its npm lockfile:
+Install the public npm packages with an exact version and commit the lockfile:
 
 ```sh
-npm install https://github.com/gitblogapp/gitblog-template-packages/releases/download/v0.1.0/gitblogapp-core-0.1.0.tgz https://github.com/gitblogapp/gitblog-template-packages/releases/download/v0.1.0/gitblogapp-cli-0.1.0.tgz https://github.com/gitblogapp/gitblog-template-packages/releases/download/v0.1.0/gitblogapp-browser-0.1.0.tgz
+npm install --save-exact @gitblogapp/core@0.1.1 @gitblogapp/cli@0.1.1 @gitblogapp/browser@0.1.1
 ```
 
-These packages have not been published to the npm registry. Do not use `npm install @gitblogapp/core` until registry publication is announced. Lockfile integrity protects downloaded tarballs; never replace a published release asset in place. Upgrade the version and lockfiles together, and validate the template before releasing it.
+Use `npm ci` for subsequent installs and CI builds. These are public packages; consumers do not need an npm login or package token. Keep the three package versions aligned and upgrade them together after validating the template.
+
+[GitHub Releases](https://github.com/gitblogapp/gitblog-template-packages/releases) also provide npm-compatible tarballs and SHA-256 checksums. Version 0.1.0 was distributed only through GitHub Releases; npm distribution starts at 0.1.1. Lockfile integrity protects downloaded tarballs. Never replace published packages or release assets in place.
 
 ## Template adapters
 
