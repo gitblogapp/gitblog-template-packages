@@ -67,9 +67,9 @@ To publish to npm, sign in with an account that can publish to the `gitblogapp` 
 
 ```sh
 npm whoami
-npm publish artifacts/gitblogapp-core-VERSION.tgz --access public
-npm publish artifacts/gitblogapp-cli-VERSION.tgz --access public
-npm publish artifacts/gitblogapp-browser-VERSION.tgz --access public
+npm publish ./artifacts/gitblogapp-core-VERSION.tgz --access public
+npm publish ./artifacts/gitblogapp-cli-VERSION.tgz --access public
+npm publish ./artifacts/gitblogapp-browser-VERSION.tgz --access public
 ```
 
 Keep npm credentials in the local npm configuration or a protected CI credential store, never this repository. Once all three packages are publicly available, pin the new version in each template, regenerate its lockfile, and verify a clean `npm ci`. Create a GitHub release with the same tested tarballs and checksums for traceability. Published package versions and release assets are immutable; use a new version for corrections.
